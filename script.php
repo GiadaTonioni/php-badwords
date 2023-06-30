@@ -3,7 +3,7 @@
     $parola = $_POST['parola'];
     $paragrafo = $_POST['paragrafo'];
 
-    ;
+    echo $parola;
 
 ?>
 
@@ -16,13 +16,13 @@
 </head>
 <body>
     <h1>
-        <?php echo $parola ?>
-    </h1>
-    <h1>
         <?php echo $paragrafo ?>
     </h1>
     <h1>
-        <?php echo "questo paragrafo è lungo:".strlen($paragrafo)." caratteri" ?>
+        <?php echo "questo paragrafo è lungo:".strlen($paragrafo)."caratteri" ?>
+    </h1>
+    <h1>
+        <?php echo str_replace($parola, '***', $paragrafo) ?>
     </h1>
 </body>
 </html>
